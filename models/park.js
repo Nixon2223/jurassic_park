@@ -9,7 +9,7 @@ const Park = function (name, ticketPrice) {
   }
 
   Park.prototype.removeDino = function(dino) {
-    this.dinosaurs.remove(dino)
+    this.dinosaurs.splice(dino, 1)
 }
   
   module.exports = Park;
