@@ -49,7 +49,7 @@ describe('Park', function() {
 
   it('should be able to find all dinosaurs of a particular species', function(){
     const actual = park.dinoBySpecies('Velociraptor')
-    assert.deepStrictEqual(actual, dino2);
+    assert.deepStrictEqual(actual, [dino2]);
   })
   it('should be able to calculate the total number of visitors per day');
 

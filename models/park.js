@@ -35,7 +35,7 @@ Park.prototype.dinoBySpecies = function(species) {
             result.push(dino)
         }
     }
-    return results
+    return result
 }
 
   module.exports = Park;
