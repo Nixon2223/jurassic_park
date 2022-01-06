@@ -29,7 +29,7 @@ Park.prototype.mostPopularDino = function() {
 }
 
 Park.prototype.dinoBySpecies = function(species) {
-    result = []
+    let result = []
     for (dino of this.dinosaurs){
         if (dino.species == species){
             result.push(dino)
@@ -38,5 +38,20 @@ Park.prototype.dinoBySpecies = function(species) {
     return result
 }
 
+Park.prototype.visitsPerDay = function() {
+    let t = 0
+    for (dino of this.dinosaurs){
+        t += dino.guestsAttractedPerDay
+    }
+    return t
+}
+
+Park.prototype.visitsPerYear = function() {
+    return this.visitsPerDay() * 365
+}
+
+Park.prototype.revenuePerYear = function() {
+    return this.visitsPerYear() * this.ticketPrice
+}
   module.exports = Park;
   

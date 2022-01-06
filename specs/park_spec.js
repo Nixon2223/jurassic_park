@@ -51,10 +51,20 @@ describe('Park', function() {
     const actual = park.dinoBySpecies('Velociraptor')
     assert.deepStrictEqual(actual, [dino2]);
   })
-  it('should be able to calculate the total number of visitors per day');
 
-  it('should be able to calculate the total number of visitors per year');
+  it('should be able to calculate the total number of visitors per day', function(){
+    const actual = park.visitsPerDay()
+    assert.strictEqual(actual, 240);
+  })
 
-  it('should be able to calculate total revenue for one year');
+  it('should be able to calculate the total number of visitors per year', function(){
+    const actual = park.visitsPerYear()
+    assert.strictEqual(actual, 87600);
+  })
+
+  it('should be able to calculate total revenue for one year', function(){
+    const actual = park.revenuePerYear()
+    assert.strictEqual(actual, 87600000);
+  })
 
 });
