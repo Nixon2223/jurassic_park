@@ -27,6 +27,16 @@ Park.prototype.mostPopularDino = function() {
     }
     return result
 }
-  
+
+Park.prototype.dinoBySpecies = function(species) {
+    result = []
+    for (dino of this.dinosaurs){
+        if (dino.species == species){
+            result.push(dino)
+        }
+    }
+    return results
+}
+
   module.exports = Park;
   
